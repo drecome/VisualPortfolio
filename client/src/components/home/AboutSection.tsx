@@ -1,14 +1,43 @@
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Link } from 'wouter';
+import { useRef } from 'react';
 import SectionHeading from '@/components/shared/SectionHeading';
-import { SKILLS, EXPERIENCE } from '@/lib/constants';
+import { STATS, EXPERIENCE } from '@/lib/constants';
 import useScrollReveal from '@/lib/hooks/useScrollReveal';
+import { useCounter } from '@/hooks/useCounter';
 import { Download, Github } from 'lucide-react';
+
+const StatCard = ({ value, label, icon, index }: { value: number, label: string, icon: string, index: number }) => {
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, margin: "-100px 0px" });
+  const count = useCounter({ 
+    end: value, 
+    isInView,
+    delay: 500 + index * 200,
+    duration: 2000
+  });
+  
+  return (
+    <motion.div 
+      ref={ref}
+      key={index} 
+      className="flex flex-col items-center text-center p-4 bg-primary rounded-lg hover:bg-gray-800 transition-colors"
+      whileHover={{ y: -5, transition: { duration: 0.2 } }}
+      initial={{ opacity: 0, y: 20 }}
+      animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+      transition={{ duration: 0.6, delay: 0.1 * index }}
+    >
+      <div className="text-secondary text-3xl mb-2"><i className={icon}></i></div>
+      <div className="text-3xl font-bold text-white mb-1">{count}</div>
+      <span className="text-gray-400 text-sm">{label}</span>
+    </motion.div>
+  );
+};
 
 const AboutSection = () => {
   const imageRef = useScrollReveal<HTMLDivElement>({ once: true });
   const contentRef = useScrollReveal<HTMLDivElement>({ once: true });
-  const skillsRef = useScrollReveal<HTMLDivElement>({ once: true });
+  const statsRef = useScrollReveal<HTMLDivElement>({ once: true });
   const buttonRef = useScrollReveal<HTMLDivElement>({ once: true });
   
   return (
@@ -62,22 +91,21 @@ const AboutSection = () => {
               <p>My approach focuses on player-centric design and performance optimization, ensuring that each game I develop not only looks stunning but also provides smooth, responsive gameplay that keeps players coming back.</p>
             </motion.div>
             
-            {/* Skills */}
-            <motion.div 
-              ref={skillsRef}
-              className="grid grid-cols-2 md:grid-cols-3 gap-6 mb-10 reveal"
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              viewport={{ once: true, margin: "-100px" }}
+            {/* Stats */}
+            <div 
+              ref={statsRef}
+              className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-10"
             >
-              {SKILLS.map((skill, index) => (
-                <div key={index} className="flex items-center gap-3">
-                  <div className="text-secondary text-xl"><i className={skill.icon}></i></div>
-                  <span className="text-white">{skill.name}</span>
-                </div>
+              {STATS.map((stat, index) => (
+                <StatCard
+                  key={index}
+                  value={stat.value}
+                  label={stat.label}
+                  icon={stat.icon}
+                  index={index}
+                />
               ))}
-            </motion.div>
+            </div>
             
             <motion.div 
               ref={buttonRef}

@@ -181,13 +181,50 @@ export const TESTIMONIALS = [
   }
 ];
 
+export const STATS = [
+  { value: 24, label: "Games Completed", icon: "fas fa-gamepad" },
+  { value: 37, label: "Satisfied Clients", icon: "fas fa-smile" },
+  { value: 8, label: "Years Experience", icon: "fas fa-calendar-alt" },
+  { value: 5, label: "Awards Won", icon: "fas fa-trophy" }
+];
+
 export const SKILLS = [
-  { name: "Unity Engine", icon: "fas fa-cube" },
-  { name: "Unreal Engine", icon: "fas fa-cogs" },
-  { name: "C# / C++", icon: "fas fa-code" },
-  { name: "Game Design", icon: "fas fa-gamepad" },
-  { name: "3D Modeling", icon: "fas fa-cubes" },
-  { name: "Animation", icon: "fas fa-film" }
+  { 
+    name: "Unity Engine", 
+    icon: "fas fa-cube",
+    level: 90,
+    color: "#2196f3" 
+  },
+  { 
+    name: "Unreal Engine", 
+    icon: "fas fa-cogs",
+    level: 75,
+    color: "#7b1fa2" 
+  },
+  { 
+    name: "C# / C++", 
+    icon: "fas fa-code",
+    level: 85,
+    color: "#ff5722" 
+  },
+  { 
+    name: "Game Design", 
+    icon: "fas fa-gamepad",
+    level: 95,
+    color: "#4caf50" 
+  },
+  { 
+    name: "3D Modeling", 
+    icon: "fas fa-cubes",
+    level: 70,
+    color: "#f44336" 
+  },
+  { 
+    name: "Animation", 
+    icon: "fas fa-film",
+    level: 80,
+    color: "#ff9800" 
+  }
 ];
 
 export const EXPERIENCE = [

@@ -2,6 +2,7 @@ import { motion } from 'framer-motion';
 import { Helmet } from 'react-helmet';
 import HeroSection from '@/components/home/HeroSection';
 import AboutSection from '@/components/home/AboutSection';
+import SkillsSection from '@/components/home/SkillsSection';
 import PortfolioSection from '@/components/home/PortfolioSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
@@ -18,12 +19,13 @@ const HomePage = () => {
       variants={pageTransition}
     >
       <Helmet>
-        <title>Alexander Chen | Creative Designer & Developer</title>
-        <meta name="description" content="Creative designer and developer crafting stunning digital experiences that merge aesthetic beauty with functional excellence." />
+        <title>Alex Parker | Game Developer & Designer</title>
+        <meta name="description" content="Game developer and designer crafting immersive gaming experiences with stunning visuals and engaging gameplay mechanics." />
       </Helmet>
       
       <HeroSection />
       <AboutSection />
+      <SkillsSection />
       <PortfolioSection />
       <ServicesSection />
       <TestimonialsSection />
