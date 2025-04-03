@@ -45,31 +45,37 @@ const ProjectDetailPage = () => {
   
   // Mock additional project details that would come from a full API in a real implementation
   const projectDetails = {
-    overview: "This project was a comprehensive redesign and development effort focused on creating a modern, user-friendly digital experience that aligns with the client's brand values and business objectives.",
-    challenge: "The client needed a solution that would stand out in a competitive market, effectively communicate their unique value proposition, and provide an intuitive user experience that drives conversion.",
-    solution: "I developed a custom design system and user interface that emphasizes clarity, accessibility, and visual impact. The implementation includes responsive design, performance optimization, and seamless interactions that guide users through the customer journey.",
-    technologies: ["React", "TypeScript", "Node.js", "Tailwind CSS", "Framer Motion"],
-    role: "Lead Designer & Developer",
-    duration: "12 weeks",
-    year: "2023",
-    client: project.title.split(' ')[0],
-    liveUrl: "https://example.com",
+    overview: "This project was an ambitious game development effort focused on creating an immersive and engaging player experience with cutting-edge graphics and innovative gameplay mechanics.",
+    challenge: "The main challenge was to create a game that stood out in a crowded market, balancing visual fidelity with performance across multiple platforms while delivering innovative gameplay that feels both fresh and familiar.",
+    solution: "I developed a custom game engine module for specialized rendering effects while optimizing core systems for cross-platform compatibility. The implementation includes advanced AI behaviors, procedural content generation, and responsive controls that provide satisfying player feedback.",
+    technologies: ["Unity", "C#", "Shader Graph", "FMOD Audio", "Visual Scripting"],
+    role: "Lead Game Developer",
+    duration: "18 months",
+    year: "2024",
+    platforms: "PC, PlayStation 5, Xbox Series X/S",
+    storeUrl: "https://store.steampowered.com",
     githubUrl: "https://github.com",
     testimonial: {
-      quote: "Working with Alexander on this project was an absolute pleasure. His attention to detail and creative problem-solving resulted in a digital product that exceeds our expectations and delivers measurable business results.",
-      author: "Client Name",
-      position: `CEO, ${project.title.split(' ')[0]}`
+      quote: "Working with Alex on this game was an incredible experience. Their technical expertise and creative vision helped us overcome numerous development challenges and deliver a game that has exceeded our players' expectations and our sales targets.",
+      author: "Studio Director",
+      position: `${project.title.split(' ')[0]} Studios`
     },
     additionalImages: [
-      "https://images.unsplash.com/photo-1535957998253-26ae1ef29506?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=736&q=80",
-      "https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1472&q=80"
+      "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
+      "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+    ],
+    features: [
+      "Stunning real-time ray-traced lighting",
+      "Adaptive AI that learns from player behavior",
+      "Procedurally generated world with over 100 unique locations",
+      "Advanced physics-based interaction system"
     ],
     results: [
-      "40% increase in user engagement",
-      "25% improvement in conversion rate",
-      "65% reduction in bounce rate",
-      "Significant improvement in brand perception"
+      "500,000+ copies sold in first month",
+      "92/100 average review score",
+      "Featured in major gaming publications",
+      "Nominated for 'Best Indie Game' award"
     ]
   };
   
@@ -81,8 +87,8 @@ const ProjectDetailPage = () => {
       variants={pageTransition}
     >
       <Helmet>
-        <title>{project.title} | Portfolio - Alexander Chen</title>
-        <meta name="description" content={`Case study of ${project.title} - ${project.description}`} />
+        <title>{project.title} | Game Portfolio - Alex Parker</title>
+        <meta name="description" content={`Game showcase: ${project.title} - ${project.description}. Explore this game development project.`} />
       </Helmet>
       
       {/* Hero Section */}
@@ -111,31 +117,31 @@ const ProjectDetailPage = () => {
             
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
               <div>
-                <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-1">Client</h3>
-                <p className="text-white">{projectDetails.client}</p>
+                <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-1">Studio</h3>
+                <p className="text-white">{project.title.split(' ')[0]} Studios</p>
               </div>
               <div>
                 <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-1">Year</h3>
                 <p className="text-white">{projectDetails.year}</p>
               </div>
               <div>
-                <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-1">Duration</h3>
+                <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-1">Development Time</h3>
                 <p className="text-white">{projectDetails.duration}</p>
               </div>
               <div>
-                <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-1">Role</h3>
-                <p className="text-white">{projectDetails.role}</p>
+                <h3 className="text-secondary text-sm font-medium uppercase tracking-wider mb-1">Platforms</h3>
+                <p className="text-white">{projectDetails.platforms}</p>
               </div>
             </div>
             
             <div className="flex flex-wrap gap-4">
               <a 
-                href={projectDetails.liveUrl} 
+                href={projectDetails.storeUrl} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="bg-secondary hover:bg-secondary-light text-white px-6 py-3 rounded-md transition-colors inline-flex items-center gap-2"
               >
-                <span>View Live Site</span>
+                <span>View on Steam</span>
                 <ExternalLink size={16} />
               </a>
               
@@ -145,7 +151,7 @@ const ProjectDetailPage = () => {
                 rel="noopener noreferrer"
                 className="border border-white hover:border-secondary hover:text-secondary text-white px-6 py-3 rounded-md transition-colors inline-flex items-center gap-2"
               >
-                <span>View Code</span>
+                <span>Development Blog</span>
                 <Github size={16} />
               </a>
             </div>
@@ -181,6 +187,16 @@ const ProjectDetailPage = () => {
                 <h3 className="text-2xl font-serif font-bold text-white mt-12 mb-4">The Solution</h3>
                 <p className="text-lg text-gray-300 mb-8">{projectDetails.solution}</p>
               </div>
+              
+              <h3 className="text-2xl font-serif font-bold text-white mt-12 mb-6">Key Features</h3>
+              <ul className="space-y-4 mb-12">
+                {projectDetails.features.map((feature, index) => (
+                  <li key={index} className="flex items-start gap-3 text-gray-300">
+                    <span className="text-secondary mt-1">•</span>
+                    <span>{feature}</span>
+                  </li>
+                ))}
+              </ul>
               
               <h3 className="text-2xl font-serif font-bold text-white mt-12 mb-6">Results</h3>
               <ul className="space-y-4 mb-12">
@@ -233,8 +249,8 @@ const ProjectDetailPage = () => {
                   </div>
                   
                   <div>
-                    <h4 className="text-secondary font-medium text-sm uppercase tracking-wider mb-2">Client</h4>
-                    <p className="text-gray-300">{projectDetails.client}</p>
+                    <h4 className="text-secondary font-medium text-sm uppercase tracking-wider mb-2">Studio</h4>
+                    <p className="text-gray-300">{project.title.split(' ')[0]} Studios</p>
                   </div>
                 </div>
               </div>

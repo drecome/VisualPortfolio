@@ -1,102 +1,102 @@
 export const NAV_LINKS = [
   { href: "/", label: "Home" },
-  { href: "/portfolio", label: "Portfolio" },
+  { href: "/portfolio", label: "Games" },
   { href: "/contact", label: "Contact" },
-  { href: "/blog", label: "Blog" }
+  { href: "/blog", label: "Dev Blog" }
 ];
 
 export const SOCIAL_LINKS = [
-  { name: "behance", icon: "fab fa-behance", url: "https://behance.net" },
-  { name: "dribbble", icon: "fab fa-dribbble", url: "https://dribbble.com" },
-  { name: "linkedin", icon: "fab fa-linkedin-in", url: "https://linkedin.com" },
-  { name: "instagram", icon: "fab fa-instagram", url: "https://instagram.com" },
+  { name: "steam", icon: "fab fa-steam", url: "https://steamcommunity.com" },
+  { name: "itch", icon: "fab fa-itch-io", url: "https://itch.io" },
+  { name: "twitter", icon: "fab fa-twitter", url: "https://twitter.com" },
+  { name: "youtube", icon: "fab fa-youtube", url: "https://youtube.com" },
   { name: "github", icon: "fab fa-github", url: "https://github.com" }
 ];
 
 export const PORTFOLIO_CATEGORIES = [
-  { id: "all", name: "All" },
-  { id: "web", name: "Web Design" },
-  { id: "ui", name: "UI/UX" },
-  { id: "branding", name: "Branding" }
+  { id: "all", name: "All Games" },
+  { id: "action", name: "Action" },
+  { id: "adventure", name: "Adventure" },
+  { id: "strategy", name: "Strategy" }
 ];
 
 export const PORTFOLIO_PROJECTS = [
   {
     id: 1,
-    title: "GreenLife E-commerce",
-    categories: ["web"],
-    description: "Web Design, E-commerce, UI/UX",
-    image: "https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    title: "Neon Horizon",
+    categories: ["action"],
+    description: "Cyberpunk Action RPG, PC & Console",
+    image: "https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: 2,
-    title: "WealthWise Mobile App",
-    categories: ["ui"],
-    description: "UI/UX, Mobile Design, Fintech",
-    image: "https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
+    title: "Celestial Odyssey",
+    categories: ["adventure"],
+    description: "Space Exploration Adventure, Mobile & PC",
+    image: "https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80"
   },
   {
     id: 3,
-    title: "Aroma Cafe Rebrand",
-    categories: ["branding"],
-    description: "Branding, Identity, Packaging",
-    image: "https://images.unsplash.com/photo-1574359411659-11a81c4b9f57?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1373&q=80"
+    title: "Ancient Kingdoms",
+    categories: ["strategy"],
+    description: "Historical Strategy Sim, PC Exclusive",
+    image: "https://images.unsplash.com/photo-1513807762437-8c8dee6578fe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1373&q=80"
   },
   {
     id: 4,
-    title: "NexGen Tech Corporate Site",
-    categories: ["web"],
-    description: "Web Design, Corporate Identity",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    title: "Shadow Protocol",
+    categories: ["action"],
+    description: "Stealth Action Thriller, Console Exclusive",
+    image: "https://images.unsplash.com/photo-1616031037011-799237a65ca4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: 5,
-    title: "Analytics Dashboard",
-    categories: ["ui"],
-    description: "UI/UX, Data Visualization",
-    image: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+    title: "Pixel Quest",
+    categories: ["adventure"],
+    description: "Retro-Style Platformer, Cross-Platform",
+    image: "https://images.unsplash.com/photo-1604846887565-640d2c52d0e6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
   },
   {
     id: 6,
-    title: "FitLife Brand Identity",
-    categories: ["branding"],
-    description: "Branding, Marketing",
-    image: "https://images.unsplash.com/photo-1598367772323-3eb2012c9bc4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80"
+    title: "Empire Ascendant",
+    categories: ["strategy"],
+    description: "Real-Time Strategy, PC & Console",
+    image: "https://images.unsplash.com/photo-1552820728-8b83bb6b773f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1478&q=80"
   }
 ];
 
 export const SERVICES = [
   {
     id: 1,
-    title: "UI/UX Design",
-    icon: "fas fa-paint-brush",
-    description: "Creating intuitive and engaging user interfaces that enhance user experience and drive conversion. My designs balance aesthetics with functionality.",
+    title: "Game Design",
+    icon: "fas fa-gamepad",
+    description: "Creating captivating gameplay mechanics and systems that engage players and deliver memorable gaming experiences. My designs balance challenge with satisfaction.",
     features: [
-      "User Research & Personas",
-      "Wireframing & Prototyping",
-      "Interactive Designs"
+      "Gameplay Systems Design",
+      "Level Design & Balancing",
+      "Player Progression Systems"
     ]
   },
   {
     id: 2,
-    title: "Web Development",
+    title: "Game Development",
     icon: "fas fa-code",
-    description: "Building responsive, high-performance websites and applications that provide seamless user experiences across all devices and platforms.",
+    description: "Building high-performance games with smooth gameplay, optimized for various platforms and devices. I specialize in Unity and Unreal Engine development.",
     features: [
-      "Frontend Development",
-      "Responsive Web Design",
-      "Performance Optimization"
+      "Cross-Platform Development",
+      "Performance Optimization",
+      "Advanced Graphics & Effects"
     ]
   },
   {
     id: 3,
-    title: "Branding & Identity",
-    icon: "fas fa-layer-group",
-    description: "Developing cohesive brand identities that communicate your company's values and connect with your target audience effectively.",
+    title: "Game Art & Animation",
+    icon: "fas fa-palette",
+    description: "Crafting stunning visual assets and fluid animations that bring game worlds to life. My art direction emphasizes visual cohesion and storytelling.",
     features: [
-      "Logo Design",
-      "Brand Guidelines",
-      "Visual Identity Systems"
+      "2D/3D Asset Creation",
+      "Character Animation",
+      "Environmental Design"
     ]
   }
 ];
@@ -104,50 +104,50 @@ export const SERVICES = [
 export const PRICING_PLANS = [
   {
     id: 1,
-    title: "Basic",
-    subtitle: "Perfect for small projects",
-    price: "$699",
+    title: "Indie",
+    subtitle: "Perfect for solo developers",
+    price: "$999",
     features: [
-      "Custom Website Design (5 pages)",
-      "Responsive Mobile Design",
-      "Basic SEO Setup",
-      "Contact Form Integration"
+      "Game Design Document",
+      "Core Gameplay Prototype",
+      "Basic Art Assets",
+      "One Major Game Feature"
     ],
     notIncluded: [
-      "Custom Animations",
-      "E-commerce Functionality"
+      "Advanced AI Systems",
+      "Online Multiplayer"
     ],
     popular: false
   },
   {
     id: 2,
-    title: "Premium",
-    subtitle: "Ideal for growing businesses",
-    price: "$1,499",
+    title: "Standard",
+    subtitle: "Ideal for small studios",
+    price: "$2,499",
     features: [
-      "Custom Website Design (10 pages)",
-      "Responsive Mobile Design",
-      "Advanced SEO Setup",
-      "Custom Contact & Lead Forms",
-      "Custom Animations & Interactions"
+      "Complete Game Design",
+      "Full Gameplay Implementation",
+      "Custom Art Package",
+      "Basic AI Implementation",
+      "Sound Design Integration"
     ],
     notIncluded: [
-      "E-commerce Functionality"
+      "Online Multiplayer"
     ],
     popular: true
   },
   {
     id: 3,
-    title: "Enterprise",
-    subtitle: "For advanced business needs",
-    price: "$2,999",
+    title: "Premium",
+    subtitle: "For commercial game projects",
+    price: "$4,999",
     features: [
-      "Custom Website Design (20+ pages)",
-      "Responsive Mobile Design",
-      "Comprehensive SEO Strategy",
-      "Advanced Form Systems",
-      "Premium Animations & Effects",
-      "E-commerce Functionality"
+      "Advanced Game Systems",
+      "Full Art Direction & Assets",
+      "Complex AI Behaviors",
+      "Multiplayer Capabilities",
+      "Performance Optimization",
+      "Cross-Platform Support"
     ],
     notIncluded: [],
     popular: false
@@ -157,92 +157,92 @@ export const PRICING_PLANS = [
 export const TESTIMONIALS = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    position: "CEO, GreenLife",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
-    text: "Alexander transformed our outdated website into a beautiful, functional platform that perfectly represents our brand. The attention to detail and creative solutions exceeded our expectations. We've seen a significant increase in engagement since the redesign.",
+    name: "Marcus Reid",
+    position: "Founder, Indie Horizon Games",
+    image: "https://images.unsplash.com/photo-1557862921-37829c790f19?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=687&q=80",
+    text: "Working with Alex transformed our game project from a simple concept into a polished, engaging experience. Their technical expertise and creative problem-solving helped us overcome numerous challenges during development. Our game's player retention has increased by 35% since launch!",
     rating: 5
   },
   {
     id: 2,
-    name: "David Martinez",
-    position: "Founder, NexGen Technologies",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
-    text: "Working with Alexander was a game-changer for our startup. His intuitive design approach and technical expertise created a seamless user experience that our customers love. The interactive elements he added make our platform stand out from competitors.",
+    name: "Elena Martinez",
+    position: "Creative Director, Quantum Studios",
+    image: "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80",
+    text: "Alex's skills in game optimization and graphics implementation are exceptional. Our game went from struggling at 30 FPS to running smoothly at 60+ FPS after their optimization work. They also added visual effects that made our game world much more immersive and atmospheric.",
     rating: 5
   },
   {
     id: 3,
-    name: "Emily Wong",
-    position: "Marketing Director, Aroma Cafe",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80",
-    text: "Alexander's rebrand of our cafe chain completely revitalized our image. From logo design to packaging and digital presence, every element works together seamlessly. The modern yet approachable aesthetic has attracted a whole new demographic to our stores.",
+    name: "James Chen",
+    position: "Lead Developer, Pixel Dreams",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=761&q=80",
+    text: "We hired Alex to redesign our game's combat system, which was receiving mixed feedback from players. Their implementation was not only more responsive and satisfying but also easier to expand with new enemy types and weapons. Our player reviews improved dramatically after the update.",
     rating: 4.5
   }
 ];
 
 export const SKILLS = [
-  { name: "Web Development", icon: "fas fa-code" },
-  { name: "UI/UX Design", icon: "fas fa-paint-brush" },
-  { name: "Responsive Design", icon: "fas fa-mobile-alt" },
-  { name: "Brand Strategy", icon: "fas fa-layer-group" },
-  { name: "Performance Optimization", icon: "fas fa-rocket" },
-  { name: "3D Modeling", icon: "fas fa-cubes" }
+  { name: "Unity Engine", icon: "fas fa-cube" },
+  { name: "Unreal Engine", icon: "fas fa-cogs" },
+  { name: "C# / C++", icon: "fas fa-code" },
+  { name: "Game Design", icon: "fas fa-gamepad" },
+  { name: "3D Modeling", icon: "fas fa-cubes" },
+  { name: "Animation", icon: "fas fa-film" }
 ];
 
 export const EXPERIENCE = [
   {
     id: 1,
     years: "2021 - Present",
-    title: "Senior UI/UX Designer at TechVision",
-    description: "Led the redesign of the company's flagship product, resulting in a 40% increase in user engagement and a 25% reduction in bounce rate. Managed a team of three designers, establishing design systems and workflows."
+    title: "Lead Game Developer at Nebula Interactive",
+    description: "Leading development on multiple AA game titles across various genres. Responsible for core gameplay systems, shaders, and optimization. Successfully shipped two major titles with over 1 million combined sales."
   },
   {
     id: 2,
     years: "2018 - 2021",
-    title: "Interactive Developer at DigitalCraft",
-    description: "Developed interactive web experiences for clients in various industries. Created custom animations and micro-interactions that enhanced user experience while maintaining performance standards."
+    title: "Senior Developer at Quantum Games",
+    description: "Specialized in AI programming and procedural generation for open-world games. Developed a dynamic world generation system that significantly reduced development time while increasing environmental variety."
   },
   {
     id: 3,
     years: "2016 - 2018",
-    title: "Web Designer at CreativeStudio",
-    description: "Designed responsive websites for small to medium businesses. Collaborated with developers to ensure design integrity throughout the development process."
+    title: "Game Developer at Indie Collective",
+    description: "Worked on multiple indie game projects across various platforms. Responsible for gameplay programming, physics implementation, and cross-platform optimization. Released four successful indie titles."
   },
   {
     id: 4,
     years: "2014 - 2016",
-    title: "Graphic Designer at PrintPlus",
-    description: "Created visual assets for print and digital media. Developed brand identities, marketing materials, and social media graphics for diverse clients."
+    title: "Junior Developer at Pixel Dreams",
+    description: "Focused on mobile game development using Unity. Created gameplay systems, implemented monetization features, and optimized performance for low-spec devices. Contributed to two games with over 5 million downloads."
   }
 ];
 
 export const BLOG_POSTS = [
   {
     id: 1,
-    title: "The Future of Web Design: Trends to Watch in 2023",
-    excerpt: "Exploring emerging design trends that are shaping the future of the web, from 3D elements to immersive experiences and accessibility-focused approaches.",
-    image: "https://images.unsplash.com/photo-1549921296-3b0f9a35af25?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80",
-    category: "Design",
-    date: "June 10, 2023",
+    title: "The Future of Game Development: Trends to Watch in 2025",
+    excerpt: "Exploring emerging technologies and design approaches in game development, from procedural generation to AI companions and next-gen rendering techniques.",
+    image: "https://images.unsplash.com/photo-1511512578047-dfb367046420?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1527&q=80",
+    category: "Tech",
+    date: "April 2, 2025",
     readTime: "5 min read"
   },
   {
     id: 2,
-    title: "Building Effective Design Systems for Scale",
-    excerpt: "A comprehensive guide to creating and implementing design systems that enhance consistency, improve collaboration, and enable faster product development.",
-    image: "https://images.unsplash.com/photo-1534670007418-bc50e48fe231?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
-    category: "Development",
-    date: "May 24, 2023",
+    title: "Building Effective Game Combat Systems",
+    excerpt: "A deep dive into designing satisfying combat mechanics, from hitboxes and frame data to feedback systems and enemy AI behaviors.",
+    image: "https://images.unsplash.com/photo-1552058544-f2b08422138a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1376&q=80",
+    category: "Design",
+    date: "March 18, 2025",
     readTime: "7 min read"
   },
   {
     id: 3,
-    title: "The Psychology of Color in Branding and User Experience",
-    excerpt: "Delving into how color choices influence perception, emotions, and behaviors, with practical guidelines for making strategic color decisions in your projects.",
-    image: "https://images.unsplash.com/photo-1416339684178-3a239570f315?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80",
-    category: "Branding",
-    date: "April 15, 2023",
+    title: "The Art of Level Design: Creating Memorable Game Spaces",
+    excerpt: "Exploring techniques for crafting game environments that balance challenge, exploration, and narrative while guiding players through memorable experiences.",
+    image: "https://images.unsplash.com/photo-1548484352-ea579e5233a8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1467&q=80",
+    category: "Design",
+    date: "March 5, 2025",
     readTime: "6 min read"
   }
 ];
