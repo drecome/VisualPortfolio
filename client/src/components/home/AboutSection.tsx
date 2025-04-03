@@ -20,7 +20,6 @@ const StatCard = ({ value, label, icon, index }: { value: number, label: string,
   return (
     <motion.div 
       ref={ref}
-      key={index} 
       className="flex flex-col items-center text-center p-4 bg-primary rounded-lg hover:bg-gray-800 transition-colors"
       whileHover={{ y: -5, transition: { duration: 0.2 } }}
       initial={{ opacity: 0, y: 20 }}

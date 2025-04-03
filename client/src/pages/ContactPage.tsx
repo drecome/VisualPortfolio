@@ -13,6 +13,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Phone, Mail, MapPin, Send } from 'lucide-react';
 import SectionHeading from '@/components/shared/SectionHeading';
+import ConfettiEffect from '@/components/shared/ConfettiEffect';
 
 // Form schema
 const formSchema = z.object({
@@ -26,6 +27,7 @@ type FormData = z.infer<typeof formSchema>;
 
 const ContactPage = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showConfetti, setShowConfetti] = useState(false);
   const { toast } = useToast();
   
   const form = useForm<FormData>({
@@ -44,13 +46,23 @@ const ContactPage = () => {
     // Simulate API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
+    // Show success toast
     toast({
       title: "Message sent!",
       description: "Thanks for reaching out. I'll get back to you soon.",
     });
     
+    // Trigger confetti celebration
+    setShowConfetti(true);
+    
+    // Reset form
     form.reset();
     setIsSubmitting(false);
+    
+    // Reset confetti after a delay
+    setTimeout(() => {
+      setShowConfetti(false);
+    }, 5000);
   };
 
   return (
@@ -248,6 +260,13 @@ const ContactPage = () => {
         </div>
       </div>
       <Toaster />
+      
+      {/* Celebration confetti effect */}
+      <ConfettiEffect 
+        run={showConfetti} 
+        duration={5000}
+        numberOfPieces={300}
+      />
     </motion.div>
   );
 };

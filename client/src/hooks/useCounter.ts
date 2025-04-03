@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 
 interface UseCounterProps {
   start?: number;
@@ -9,9 +9,14 @@ interface UseCounterProps {
   isInView: boolean;
 }
 
-// Easing functions
-const easeOutCubic = (t: number): number => 1 - Math.pow(1 - t, 3);
-const easeOutQuart = (t: number): number => 1 - Math.pow(1 - t, 4);
+// Linear easing function (default)
+const linearEasing = (t: number) => t;
+
+// Cubic easing out
+const easeOutCubic = (t: number) => 1 - Math.pow(1 - t, 3);
+
+// Exponential easing out
+const easeOutExpo = (t: number) => (t === 1) ? 1 : 1 - Math.pow(2, -10 * t);
 
 export function useCounter({
   start = 0,
@@ -22,41 +27,47 @@ export function useCounter({
   isInView
 }: UseCounterProps) {
   const [count, setCount] = useState(start);
-  const countRef = useRef(start);
-  const timerRef = useRef<NodeJS.Timeout | null>(null);
-
-  // Animation function
-  const animate = (timestamp: number, startTime: number) => {
-    const runtime = timestamp - startTime;
-    const relativeProgress = runtime / duration;
-    
-    if (relativeProgress < 1) {
-      const easedProgress = easing(relativeProgress);
-      const value = Math.floor(start + (end - start) * easedProgress);
-      
-      countRef.current = value;
-      setCount(value);
-      
-      requestAnimationFrame((time) => animate(time, startTime));
-    } else {
-      countRef.current = end;
-      setCount(end);
-    }
-  };
-
+  
   useEffect(() => {
     if (!isInView) return;
     
-    timerRef.current = setTimeout(() => {
-      requestAnimationFrame((timestamp) => animate(timestamp, timestamp));
+    let startTime: number;
+    let animationFrame: number;
+    let timer: NodeJS.Timeout;
+    
+    // Apply initial delay
+    timer = setTimeout(() => {
+      // Start animation after delay
+      const animate = (timestamp: number) => {
+        if (!startTime) startTime = timestamp;
+        const progress = Math.min((timestamp - startTime) / duration, 1);
+        
+        // Apply easing function to progress
+        const easedProgress = easing(progress);
+        
+        // Calculate current value
+        const currentValue = Math.floor(start + easedProgress * (end - start));
+        setCount(currentValue);
+        
+        // Continue animation until complete
+        if (progress < 1) {
+          animationFrame = requestAnimationFrame(animate);
+        } else {
+          setCount(end); // Ensure we end exactly at the target value
+        }
+      };
+      
+      animationFrame = requestAnimationFrame(animate);
     }, delay);
-
+    
+    // Cleanup function
     return () => {
-      if (timerRef.current) {
-        clearTimeout(timerRef.current);
+      clearTimeout(timer);
+      if (animationFrame) {
+        cancelAnimationFrame(animationFrame);
       }
     };
-  }, [isInView]);
-
+  }, [start, end, duration, delay, easing, isInView]);
+  
   return count;
 }
