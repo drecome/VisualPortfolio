@@ -23,7 +23,8 @@ function Router() {
         <Route path="/" component={HomePage} />
         <Route path="/about" component={AboutPage} />
         <Route path="/portfolio" component={PortfolioPage} />
-        <Route path="/portfolio/:id" component={ProjectDetailPage} />
+        <Route path="/games" component={PortfolioPage} />
+        <Route path="/project/:id" component={ProjectDetailPage} />
         <Route path="/services" component={ServicesPage} />
         <Route path="/contact" component={ContactPage} />
         <Route path="/blog" component={BlogPage} />

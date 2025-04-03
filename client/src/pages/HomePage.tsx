@@ -6,7 +6,6 @@ import SkillsSection from '@/components/home/SkillsSection';
 import PortfolioSection from '@/components/home/PortfolioSection';
 import ServicesSection from '@/components/home/ServicesSection';
 import TestimonialsSection from '@/components/home/TestimonialsSection';
-import ContactSection from '@/components/home/ContactSection';
 import BlogSection from '@/components/home/BlogSection';
 import { pageTransition } from '@/lib/animations';
 
@@ -29,7 +28,6 @@ const HomePage = () => {
       <PortfolioSection />
       <ServicesSection />
       <TestimonialsSection />
-      <ContactSection />
       <BlogSection />
     </motion.div>
   );
