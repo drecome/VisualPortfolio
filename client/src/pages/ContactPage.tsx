@@ -43,26 +43,55 @@ const ContactPage = () => {
   const onSubmit = async (data: FormData) => {
     setIsSubmitting(true);
     
-    // Simulate API call
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    // Show success toast
-    toast({
-      title: "Message sent!",
-      description: "Thanks for reaching out. I'll get back to you soon.",
-    });
-    
-    // Trigger confetti celebration
-    setShowConfetti(true);
-    
-    // Reset form
-    form.reset();
-    setIsSubmitting(false);
-    
-    // Reset confetti after a delay
-    setTimeout(() => {
-      setShowConfetti(false);
-    }, 5000);
+    try {
+      // Send form data to Formspree
+      const response = await fetch('https://formspree.io/f/mkgjqpqq', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify(data)
+      });
+      
+      if (response.ok) {
+        // Show success toast
+        toast({
+          title: "Message sent!",
+          description: "Thanks for reaching out. I'll get back to you soon.",
+        });
+        
+        // Trigger confetti celebration
+        setShowConfetti(true);
+        
+        // Reset form
+        form.reset();
+      } else {
+        // Handle error
+        const responseData = await response.json();
+        toast({
+          title: "Error sending message",
+          description: responseData.error || "Please try again later.",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      // Handle network or other errors
+      toast({
+        title: "Error sending message",
+        description: "There was a problem connecting to the server. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+      
+      // Reset confetti after a delay (only if it was shown)
+      if (showConfetti) {
+        setTimeout(() => {
+          setShowConfetti(false);
+        }, 5000);
+      }
+    }
   };
 
   return (
