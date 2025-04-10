@@ -86,7 +86,7 @@ const AboutSection = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               viewport={{ once: true, margin: "-100px" }}
             >
-              <p>Hello! I'm Alex, a passionate game developer with over 8 years of experience crafting immersive interactive experiences across multiple platforms. I combine technical expertise with creative vision to build games that engage players and push technical boundaries.</p>
+              <p>Hello! I'm Dammy, a passionate game developer with over 8 years of experience crafting immersive interactive experiences across multiple platforms. I combine technical expertise with creative vision to build games that engage players and push technical boundaries.</p>
               <p>My approach focuses on player-centric design and performance optimization, ensuring that each game I develop not only looks stunning but also provides smooth, responsive gameplay that keeps players coming back.</p>
             </motion.div>
             
