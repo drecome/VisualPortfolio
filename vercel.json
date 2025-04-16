@@ -9,14 +9,29 @@
   "routes": [
     {
       "src": "/api/(.*)",
-      "dest": "server/index.ts"
+      "dest": "server/index.ts",
+      "headers": {
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block"
+      }
     },
     {
       "handle": "filesystem"
     },
     {
       "src": "/(.*)",
-      "dest": "server/index.ts"
+      "dest": "server/index.ts",
+      "headers": {
+        "Strict-Transport-Security": "max-age=31536000; includeSubDomains",
+        "X-Content-Type-Options": "nosniff",
+        "X-Frame-Options": "DENY",
+        "X-XSS-Protection": "1; mode=block"
+      }
     }
-  ]
+  ],
+  "env": {
+    "NODE_ENV": "production"
+  }
 }
